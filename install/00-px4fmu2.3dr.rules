@@ -1,0 +1,1 @@
+ACTION=="add",KERNEL=="ttyACM[0-9]*",SUBSYSTEMS=="usb",ATTRS{idProduct}=="0011",ATTRS{idVendor}=="26ac",MODE="666",SYMLINK+="px4"

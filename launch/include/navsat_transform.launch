@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="robot_localization" type="navsat_transform_node" name="navsat_transform_node" clear_params="true" output="screen">
+        <rosparam command="load" file="$(find ice9_unitree)/params/navsat_transform.yaml" />
+        <remap from="imu/data" to="mavros/imu/data" />
+        <remap from="odometry/filtered" to="odom_fixed" />
+        <remap from="gps/fix" to="reach/fix" />
+    </node>
+</launch>
+  
+  

@@ -1,0 +1,22 @@
+<launch>
+    <!-- Unitree -->
+    <include file="$(find slam_planner)/launch/slam_planner_online.launch" />
+    <node pkg="unitree_legged_real" type="twist_sub" name="twist_sub_node" output="screen"/>
+
+    <!-- Unitree utilities -->
+    <node pkg="unitree_odom_cf_injector" type="unitree_odom_cf_injector" name="unitree_odom_cf_injector_node" output="screen"/>
+
+    <!-- EMLID Reach -->
+    <include file="$(find emlid_reach_ros)/launch/reach_ros.launch">
+        <arg name="port" value="/dev/reach_m2"/>
+    </include>
+
+    <!-- PX4 -->
+    <include file="$(find ice9_unitree)/launch/include/px4.launch">
+        <arg name="fcu_url" value="/dev/px4"/>
+    </include>
+
+    <!-- Robot Localization -->
+    <include file="$(find ice9_unitree)/launch/include/navsat_transform.launch" />
+
+</launch>
