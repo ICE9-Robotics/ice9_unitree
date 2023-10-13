@@ -1,4 +1,0 @@
-# 3DR Pixhawk FMUv2
-ACTION=="add",KERNEL=="ttyACM[0-9]*",SUBSYSTEMS=="usb",ATTRS{idProduct}=="0011",ATTRS{idVendor}=="26ac",MODE="666",SYMLINK+="pixhawk"
-#CubePilot Cube Orange
-ACTION=="add",KERNEL=="ttyACM[0-9]*",SUBSYSTEMS=="usb",ATTRS{idProduct}=="1017",ATTRS{idVendor}=="2dae",MODE="666",SYMLINK+="pixhawk"
