@@ -24,6 +24,8 @@ git clone https://github.com/tmxkn1/rtkgps_odom_matcher.git ~/ice9_ws/src/rtkgps
 ```
 Install dependencies:
 ```
+git clone -b master https://github.com/ros-drivers/nmea_msgs.git ~/ice9_ws/src/nmea_msgs
+cd ~/ice9_ws
 rosdep install --from-paths src -i -y
 ```
 Then build the package with `catkin_make`:
