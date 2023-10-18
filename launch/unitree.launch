@@ -1,10 +1,9 @@
 <launch>
     <!-- Unitree -->
-    <include file="$(find slam_planner)/launch/slam_planner_online.launch" />
     <include file="$(find unitree_legged_real)/launch/real.launch" />
 
-    <!-- Unitree utilities -->
-    <node pkg="unitree_odom_cf_injector" type="unitree_odom_cf_injector" name="unitree_odom_cf_injector_node" output="screen"/>
+    <!-- SLAM -->
+    <!-- <include file="$(find slam_planner)/launch/slam_planner_online.launch" /> -->
 
     <!-- EMLID Reach -->
     <include file="$(find ice9_unitree)/launch/include/reach_ros.launch" />
