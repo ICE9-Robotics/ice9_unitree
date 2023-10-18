@@ -1,19 +1,17 @@
 <launch>
     <!-- Unitree -->
     <include file="$(find slam_planner)/launch/slam_planner_online.launch" />
-    <node pkg="unitree_legged_real" type="twist_sub" name="twist_sub_node" output="screen"/>
+    <include file="$(find unitree_legged_real)/launch/real.launch" />
 
     <!-- Unitree utilities -->
     <node pkg="unitree_odom_cf_injector" type="unitree_odom_cf_injector" name="unitree_odom_cf_injector_node" output="screen"/>
 
     <!-- EMLID Reach -->
-    <include file="$(find emlid_reach_ros)/launch/reach_ros.launch">
-        <arg name="port" value="/dev/reach_m2"/>
-    </include>
+    <include file="$(find ice9_unitree)/launch/include/reach_ros.launch" />
 
     <!-- Nav sat transform -->
     <include file="$(find ice9_unitree)/launch/include/navsat_transform.launch" />
 
     <!-- RTK GPS odom matcher -->
-    <include file="$(find rtkgps_odom_matcher)/launch/matcher.launch" />
+    <include file="$(find ice9_unitree)/launch/include/matcher.launch" />
 </launch>
