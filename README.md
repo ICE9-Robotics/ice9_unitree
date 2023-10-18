@@ -4,7 +4,7 @@ This is the ROS melodic package that integrates Unitree GO1 with EMLID Reach RTK
 
 ## Dependencies
 1. ROS melodic
-2. [unitree_ros_to_real fork](https://github.com/ICE9-Robotics/unitree_ros_to_real/tree/unitree_go1)
+2. [unitree_ros_to_real](https://github.com/ICE9-Robotics/unitree_ros_to_real/tree/unitree_go1) (our fork)
 3. [robot_localisation](http://wiki.ros.org/robot_localization)
 4. [emlid_reach_ros](https://github.com/tmxkn1/emlid_reach_ros)
 5. [rtkgps_odom_matcher](https://github.com/tmxkn1/rtkgps_odom_matcher)
@@ -29,7 +29,6 @@ Then build the package with `catkin_make`:
 ```
 cd ice9_ws
 caktin_make
-
 ```
 
 ## Use
