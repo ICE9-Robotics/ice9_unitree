@@ -15,6 +15,7 @@ The package needs to be installed on the Head Nano PC (192.168.123.15). See [Acc
 Once logged in the Head Nano PC, download all the packages:
 
 ```
+git clone https://github.com/ICE9-Robotics/ice9_unitree.git ~/ice9_ws/src/ice9_unitree
 git clone -b v3.8.0 https://github.com/unitreerobotics/unitree_legged_sdk.git ~/ice9_ws/src/unitree_legged_sdk
 git clone https://github.com/ICE9-Robotics/unitree_ros_to_real.git ~/ice9_ws/src/unitree_ros_to_real
 git clone -b melodic-devel https://github.com/cra-ros-pkg/robot_localization.git ~/ice9_ws/src/robot_localisation
