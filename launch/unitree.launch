@@ -3,7 +3,7 @@
     <include file="$(find unitree_legged_real)/launch/real.launch" />
 
     <!-- SLAM -->
-    <!-- <include file="$(find slam_planner)/launch/slam_planner_online.launch" /> -->
+    <include file="$(find slam_planner)/launch/slam_planner_online.launch" />
 
     <!-- EMLID Reach -->
     <include file="$(find ice9_unitree)/launch/include/reach_ros.launch" />
