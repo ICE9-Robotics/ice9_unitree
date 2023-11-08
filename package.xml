@@ -15,8 +15,10 @@
 
   <run_depend>unitree_legged_real</run_depend>
   <run_depend>emlid_reach_ros</run_depend>
-  <run_depend>robot_localisation</run_depend>
+  <run_depend>robot_localization</run_depend>
   <run_depend>rtkgps_odom_matcher</run_depend>
+  <run_depend>follow_waypoints</run_depend>
+  <run_depend>mjpeg_cam</run_depend>
 
   <export>
   </export>
