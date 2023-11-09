@@ -2,6 +2,8 @@
 
 This is the ROS melodic package that integrates Unitree GO1 with EMLID Reach RTK GPS system.
 
+Our [Wiki](https://github.com/ICE9-Robotics/ice9_unitree/wiki) page contains various useful information for ROS development using the robot platform.
+
 ## Dependencies
 1. ROS melodic
 2. [unitree_ros_to_real](https://github.com/ICE9-Robotics/unitree_ros_to_real/tree/unitree_go1) (our fork)
