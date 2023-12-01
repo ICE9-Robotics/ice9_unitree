@@ -10,6 +10,9 @@
     <!-- Waypoints follower -->
     <include file="$(find ice9_unitree)/launch/include/follow_waypoints.launch" />
 
+    <!-- Diagnostics -->
+    <include file="$(find ice9_unitree)/launch/include/diagnostics.launch" />
+
     <!-- Map server -->
     <group if="$(arg map)">
         <node name="map_server" pkg="map_server" type="map_server" args="$(env HOME)/ice9_maps/map.yaml"/>
