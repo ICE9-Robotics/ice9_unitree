@@ -1,8 +1,8 @@
 <launch>
     <arg name="device_name" default="/dev/video0" />
-    <arg name="width" default="1280" />
-    <arg name="height" default="720" />
-    <arg name="framerate" default="30" />
+    <arg name="width" default="480" />
+    <arg name="height" default="400" />
+    <arg name="framerate" default="25" />
     <arg name="exposure" default="70" />
     <arg name="brightness" default="128" />
     <arg name="autoexposure" default="true" />
