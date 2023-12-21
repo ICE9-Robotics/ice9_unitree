@@ -1,0 +1,18 @@
+<launch>
+  <node name="slamware_ros_sdk_server_node" pkg="slamware_ros_sdk" type="slamware_ros_sdk_server_node" output="screen">
+    <rosparam command="load" file="$(find ice9_unitree)/params/slamware_ros_sdk_server.yaml" />
+    <!-- topic remap -->
+    <remap from= "cmd_vel"                                to= "cmd_vel"/>
+    <remap from= "move_base_simple/goal"                  to= "move_base_simple/goal"/>
+    <remap from= "slamware_ros_sdk_server_node/scan"      to= "scan"/>
+    <remap from= "slamware_ros_sdk_server_node/odom"      to= "odometry/scanmatch_raw"/>
+    <remap from= "slamware_ros_sdk_server_node/map"       to= "map"/>
+    <remap from= "map_metadata"                            to= "map_metadata"/>
+    <remap from= "global_plan_path"                        to= "global_plan_path"/>
+  </node>
+
+  <node name="map2odom"   pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 /map /odom 100"/>
+  <node name="base2laser" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 /base_link  /laser 100"/>
+  <node name="laser2foot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 /laser /base_footprint 100" />
+
+</launch>
