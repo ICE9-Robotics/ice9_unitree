@@ -1,14 +1,17 @@
 <launch>
     <arg name="map" default="false"/>
 
-    <!-- Unitree -->
-    <include file="$(find ice9_unitree)/launch/include/real.launch" />
+    <!-- Unitree legged real -->
+    <include file="$(find ice9_unitree)/launch/include/unitree_legged_real.launch" />
 
     <!-- SLAM navigation -->
     <include file="$(find ice9_unitree)/launch/include/navigation.launch" />
 
     <!-- EMLID Reach -->
     <include file="$(find ice9_unitree)/launch/include/reach_ros.launch" />
+
+    <!-- MAVROS -->
+    <include file="$(find ice9_unitree)/launch/include/mavros.launch" />
 
     <!-- Robot localization -->
     <include file="$(find ice9_unitree)/launch/include/robot_localization.launch" />

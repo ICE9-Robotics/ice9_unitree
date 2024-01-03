@@ -1,6 +1,9 @@
 <launch>
     <arg name="map" default="false"/>
 
+    <!-- MavROS -->
+    <include file="$(find ice9_unitree)/launch/include/mavros.launch" />
+
     <!-- Robot localization -->
     <include file="$(find ice9_unitree)/launch/include/robot_localization.launch" />
 
