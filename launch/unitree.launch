@@ -1,20 +1,20 @@
 <launch>
     <arg name="map" default="false"/>
 
-    <!-- Unitree -->
-    <include file="$(find unitree_legged_real)/launch/real.launch" />
+    <!-- Unitree legged real -->
+    <include file="$(find ice9_unitree)/launch/include/unitree_legged_real.launch" />
 
-    <!-- SLAM -->
-    <include file="$(find slam_planner)/launch/slam_planner_online.launch" />
+    <!-- SLAM navigation -->
+    <include file="$(find ice9_unitree)/launch/include/navigation.launch" />
 
     <!-- EMLID Reach -->
     <include file="$(find ice9_unitree)/launch/include/reach_ros.launch" />
 
-    <!-- Nav sat transform -->
-    <include file="$(find ice9_unitree)/launch/include/navsat_transform.launch" />
+    <!-- MAVROS -->
+    <include file="$(find ice9_unitree)/launch/include/mavros.launch" />
 
-    <!-- RTK GPS odom matcher -->
-    <include file="$(find ice9_unitree)/launch/include/matcher.launch" />
+    <!-- Robot localization -->
+    <include file="$(find ice9_unitree)/launch/include/robot_localization.launch" />
 
     <!-- Waypoints follower -->
     <include file="$(find ice9_unitree)/launch/include/follow_waypoints.launch" />

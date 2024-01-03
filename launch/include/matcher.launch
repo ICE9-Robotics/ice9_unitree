@@ -1,7 +1,0 @@
-<launch>
-	<node pkg="rtkgps_odom_matcher" type="matcher_node" name="matcher_node" output="screen">
-		<rosparam command="load" file="$(find ice9_unitree)/params/matcher.yaml" />
-        <remap from="odometry/wheel" to="odom" />
-        <remap from="nmea/gpgga" to="reach/nmea/gpgga" />
-	</node>
-</launch>
