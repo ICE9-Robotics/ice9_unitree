@@ -11,24 +11,22 @@
     <remap from= "global_plan_path"                        to= "global_plan_path"/>
   </node>
 
+  <node pkg="slam_planner" type="slam_planner_node" respawn="false" name="slam_planner_node" output="screen" clear_params="true"> 
+    <rosparam file="$(find improved_local_planner)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find improved_local_planner)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find improved_local_planner)/params/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find improved_local_planner)/params/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find improved_local_planner)/params/DBlocal_planner_params.yaml" command="load" />
+
+    <param name="base_global_planner" value="global_planner/GlobalPlanner" />
+    <param name="planner_frequency" value="1.0" />
+    <param name="planner_patience" value="5.0" />
+    <param name="base_local_planner" value="improved_local_planner/DBLocalPlannerROS" />
+    <param name="controller_frequency" value="5.0" />
+    <param name="controller_patience" value="15.0" />
+  </node>
+
   <node name="map2odom"   pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 /map /odom 100"/>
   <node name="base2laser" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 /base_link  /laser 100"/>
   <node name="laser2foot" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 /laser /base_footprint 100" />
-
-    <node pkg="slam_planner" type="slam_planner_node" respawn="false" name="slam_planner_node" output="screen" clear_params="true"> 
-                  <rosparam file="$(find improved_local_planner)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
-                <rosparam file="$(find improved_local_planner)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
-                <rosparam file="$(find improved_local_planner)/params/local_costmap_params.yaml" command="load" />
-                <rosparam file="$(find improved_local_planner)/params/global_costmap_params.yaml" command="load" />
-                <rosparam file="$(find improved_local_planner)/params/DBlocal_planner_params.yaml" command="load" />
-
-                <param name="base_global_planner" value="global_planner/GlobalPlanner" />
-                <param name="planner_frequency" value="1.0" />
-                <param name="planner_patience" value="5.0" />
-                <param name="base_local_planner" value="improved_local_planner/DBLocalPlannerROS" />
-                <param name="controller_frequency" value="5.0" />
-                <param name="controller_patience" value="15.0" />
-
-    </node>
-
 </launch>
