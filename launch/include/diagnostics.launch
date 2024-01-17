@@ -8,7 +8,6 @@
     <remap from="nmea/gpgga" to="reach/nmea/gpgga" />
     <remap from="high_state" to="high_state" />
     <remap from="cmd_vel" to="cmd_vel" />
-    <remap from="diagnostics" to="unitree/diagnostics" />
   </node>
 </launch>
 
