@@ -14,11 +14,17 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <run_depend>unitree_legged_real</run_depend>
+  <run_depend>slamware_ros_sdk_server_node</run_depend>
+  <run_depend>slam_planner</run_depend>
+  <run_depend>laser_filters</run_depend>
+  <run_depend>mavros</run_depend>
   <run_depend>emlid_reach_ros</run_depend>
   <run_depend>robot_localization</run_depend>
   <run_depend>rtkgps_odom_matcher</run_depend>
   <run_depend>follow_waypoints</run_depend>
   <run_depend>mjpeg_cam</run_depend>
+  <run_depend>unitree_diagnostics</run_depend>
+  <run_depend>unitree_diagnostics_msgs</run_depend>
 
   <export>
   </export>
